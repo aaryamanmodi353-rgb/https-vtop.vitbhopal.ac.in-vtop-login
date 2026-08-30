@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=720">
+    <title>VIT Bhopal Student Portal Clone</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+</head>
+
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <button class="hamburger-btn" id="hamburger-btn"><i class="fa-solid fa-bars"></i></button>
+            <div class="logo-group">
+                <span class="vit-logo">VIT</span>
+                <span class="campus-text">(Bhopal Campus)</span>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn"><i class="fa-solid fa-house-chimney" style="color: transparent; -webkit-text-stroke: 1px #ffffff;"></i></button>
+                <button class="icon-btn"><i class="fa-solid fa-print" style="color: transparent; -webkit-text-stroke: 1px #ffffff;"></i></button>
+                <button class="icon-btn"><i class="fa-regular fa-star"></i></button>
+                <button class="dropdown-btn">Quick Links <i class="fa-solid fa-caret-down"
+                        style="margin-left:5px;"></i></button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="session-timer">
+                <span id="session-timer">Session Time : 17m 22s</span>
+            </div>
+            <div class="user-profile-nav">
+                <img src="image.png" alt="User" class="avatar-small">
+                <span class="user-id">23BCE11562 (STUDENT) <i class="fa-solid fa-caret-down"
+                        style="margin-left:5px;"></i></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-phone"></i></button>
+                <div class="popup-menu" style="min-width: 150px; padding:0;">
+                    <div class="popup-item" style="padding: 10px 20px;"><i class="fa-solid fa-phone"
+                            style="font-size:12px; margin-right: 5px"></i> Contact Us</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-briefcase"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">My Info</div>
+                    <a href="profile.html" class="popup-item" style="text-decoration:none; color:inherit; display:block;"><i class="fa-regular fa-circle-dot"></i> Profile</a>
+                    <a href="credentials.html" class="popup-item" style="text-decoration:none; color:inherit; display:block;"><i class="fa-regular fa-circle-dot"></i> Credentials</a>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Acknowledgement View</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Student Bank Info</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> AAPAR ID Upload</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-circle-info"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Info Corner</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> FAQ</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Spotlight</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> General</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-paw"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Proctor</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Proctor Details</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Proctor Message</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-graduation-cap"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Academics</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Faculty Info</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Class Messages</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> My Curriculum</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Time Table</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Class Attendance</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Course Page</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> QCM View</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Academics Calendar</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Course Withdraw</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-building-columns"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Research</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> My Research Profile</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Course Work Registration</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Registration Status</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Meeting info</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-book"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Examination</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Exam Schedule</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Online Exam Schedule</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Offline Exam Schedule</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Marks</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Grades</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Paper See/Rev</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Grade History</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Arrear/ReFAT Details</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Re-Exam Application</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Supplementry Registration</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-space-shuttle shuttle-icon"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Services</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> PAT Registration</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Transcript Request</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Late Hour Request</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Water Facility</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Transport Facility</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-certificate"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Bonafide</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Apply Bonafide</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-money-bill"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Online Payments</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Payments</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Payment Receipts</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Fees Intimation</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Hostel Fees Intimation</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-house"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">Hostels</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Leave Request</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Leave History</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Biometric Report</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Hostel Room Allotment</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-trophy"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">SW Events</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Event Requisition</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Event Attendance</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Event Registration</div>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <button class="sidebar-icon"><i class="fa-solid fa-lock"></i></button>
+                <div class="popup-menu">
+                    <div class="popup-title">My Account</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Backup Codes</div>
+                    <div class="popup-item"><i class="fa-regular fa-circle-dot"></i> Change Password</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-photo-container">
+                    <img src="image.png" alt="Profile Photo" class="profile-photo">
+                    <div class="profile-name">ARYAMAN MODI</div>
+                </div>
+
+                <div class="profile-info-grid">
+                    <div class="info-col">
+                        <div class="info-item">
+                            <span class="info-label">REGISTER NUMBER:</span>
+                            <span class="info-value">23BCE11562</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">PROGRAM & BRANCH:</span>
+                            <span class="info-value">BTECH - Computer Science and Engineering</span>
+                        </div>
+                    </div>
+                    <div class="info-col">
+                        <div class="info-item">
+                            <span class="info-label">VIT EMAIL:</span>
+                            <span class="info-value">aaryaman.23bce11562@vitbhopal.ac.in</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">SCHOOL NAME:</span>
+                            <span class="info-value">School of Computer Science and Engineering (SCOPE)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordions -->
+            <div class="accordions-container">
+
+                <!-- Accordion 1 -->
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <div class="accordion-header-left">
+                            <div class="icon-badge"><i class="fa-solid fa-address-card"></i></div>
+                            <span class="accordion-title">PERSONAL INFORMATION</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="table-container">
+                            <table class="info-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-label">APPLICATION NUMBER</td>
+                                        <td class="col-value">2023323985</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STUDENT NAME</td>
+                                        <td class="col-value">ARYAMAN MODI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">DATE OF BIRTH</td>
+                                        <td class="col-value">20-12-2004</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">GENDER</td>
+                                        <td class="col-value">MALE</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">NATIVE LANGUAGE</td>
+                                        <td class="col-value">HINDI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">NATIVE STATE</td>
+                                        <td class="col-value">MADHYA PRADESH</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">BLOOD GROUP</td>
+                                        <td class="col-value">A+</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PHYSICALLY CHALLENGED</td>
+                                        <td class="col-value">NO</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">COMMUNITY</td>
+                                        <td class="col-value">GENERAL</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">RELIGION</td>
+                                        <td class="col-value">HINDU</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">CASTE</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">NATIONALITY</td>
+                                        <td class="col-value">INDIAN</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">HOSTELLER</td>
+                                        <td class="col-value">HOSTELLER</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">AADHAR NUMBER</td>
+                                        <td class="col-value">520154092437</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">NATS NUMBER</td>
+                                        <td class="col-value">NATS NUMBER</td>
+                                    </tr>
+                                    <tr class="row-separator">
+                                        <td colspan="2">CURRENT ADDRESS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STREET NAME</td>
+                                        <td class="col-value">THAKUR BABA ROAD</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">AREA NAME</td>
+                                        <td class="col-value">BHAWANIPURA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">CITY</td>
+                                        <td class="col-value">GWALIOR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STATE</td>
+                                        <td class="col-value">MADHYA PRADESH</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">COUNTRY</td>
+                                        <td class="col-value">INDIA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PINCODE</td>
+                                        <td class="col-value">475110</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PHONE NUMBER(LAND LINE)</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">EMAIL</td>
+                                        <td class="col-value">modideep38@gmail.com</td>
+                                    </tr>
+                                    <tr class="row-separator">
+                                        <td colspan="2">PERMANENT ADDRESS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STREET NAME</td>
+                                        <td class="col-value">THAKUR BABA ROAD</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">AREA NAME</td>
+                                        <td class="col-value">BHAWANIPURA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">CITY</td>
+                                        <td class="col-value">GWALIOR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STATE</td>
+                                        <td class="col-value">MADHYA PRADESH</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">COUNTRY</td>
+                                        <td class="col-value">INDIA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PINCODE</td>
+                                        <td class="col-value">475110</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PHONE NUMBER(LAND LINE)</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">EMAIL</td>
+                                        <td class="col-value">modideep38@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PHONE MOBILE NUMBER</td>
+                                        <td class="col-value">9926920631</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 2 -->
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <div class="accordion-header-left">
+                            <div class="icon-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <span class="accordion-title">EDUCATIONAL INFORMATION</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="table-container">
+                            <table class="info-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-label">APPLIED DEGREE</td>
+                                        <td class="col-value">UG</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">EDUCATIONAL QUALIFICATION</td>
+                                        <td class="col-value">12TH/INTERMEDIATE</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">BRANCH / GROUP STUDIED</td>
+                                        <td class="col-value">PCM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">SCHOOL NAME</td>
+                                        <td class="col-value">RASS JB PUBLIC SCHOO</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">MEDIUM OF STUDY</td>
+                                        <td class="col-value">ENGLISH</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">BOARD / UNIVERSITY</td>
+                                        <td class="col-value">CENTRAL BOARD OF SECONDARY EDUCATION</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">REGISTER NO/ ROLL NO</td>
+                                        <td class="col-value">19627443</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">CLASS OBTAINED</td>
+                                        <td class="col-value">FIRST CLASS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">YEAR OF PASSING/ PASSED</td>
+                                        <td class="col-value">2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">MONTH OF PASSING/ PASSED</td>
+                                        <td class="col-value">MAY</td>
+                                    </tr>
+                                    <tr class="row-separator">
+                                        <td colspan="2">SCHOOL / COLLEGE ADDRESS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">AREA NAME</td>
+                                        <td class="col-value">SAMUDAN GWALIOR ROAD</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">CITY / DISTRICT NAME</td>
+                                        <td class="col-value">GWALIOR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STATE NAME</td>
+                                        <td class="col-value">MADHYA PRADESH</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PINCODE / ZIPCODE</td>
+                                        <td class="col-value">475110</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PHONE NUMBER(LAND LINE)</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">BREAK IN STUDY</td>
+                                        <td class="col-value">NO</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">REASON</td>
+                                        <td class="col-value">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 3 -->
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <div class="accordion-header-left">
+                            <div class="icon-badge"><i class="fa-solid fa-users"></i></div>
+                            <span class="accordion-title">FAMILY INFORMATION</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="table-container">
+                            <table class="info-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-label">NO.OF BROTHERS</td>
+                                        <td class="col-value">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">NO.OF SISTERS</td>
+                                        <td class="col-value">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">IF BROTHER/SISTER STUDYING IN VIT</td>
+                                        <td class="col-value">NO</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STUDYING DETAILS</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">IF BROTHER/SISTER STUDIED IN VIT</td>
+                                        <td class="col-value">NO</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STUDIED DETAILS</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr class="row-separator">
+                                        <td colspan="2">FATHER DETAILS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">FATHER NAME</td>
+                                        <td class="col-value">MUKESH MODI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">QUALIFICATION</td>
+                                        <td class="col-value">MA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">OCCUPATION</td>
+                                        <td class="col-value">BUSINESS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">ORGANIZATION</td>
+                                        <td class="col-value">JEWELLERY SHOP</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">EMP.ID(IF EMPLOYED IN VIT)</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">MOBILE NUMBER</td>
+                                        <td class="col-value">9926920631</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">EMAIL</td>
+                                        <td class="col-value">modideep38@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">ANNUAL INCOME</td>
+                                        <td class="col-value">400001 TO 500000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">OFFICIAL ADDRESS(AREA NAME)</td>
+                                        <td class="col-value">THAKUR BABA ROAD BHAWANIPURA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">STATE</td>
+                                        <td class="col-value">MADHYA PRADESH</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">CITY/DISTRICT</td>
+                                        <td class="col-value">GWALIOR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PINCODE/ZIPCODE</td>
+                                        <td class="col-value">475110</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">PHONE NUMBER(LAND LINE)</td>
+                                        <td class="col-value">NA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">DESIGNATION</td>
+                                        <td class="col-value">OWNER</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">GUARDIAN INFO</td>
+                                        <td class="col-value">FATHER</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 4 -->
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <div class="accordion-header-left">
+                            <div class="icon-badge"><i class="fa-solid fa-user-shield"></i></div>
+                            <span class="accordion-title">PROCTOR INFORMATION</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="table-container">
+                            <table class="info-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-label">FACULTY ID</td>
+                                        <td class="col-value">100208</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">FACULTY NAME</td>
+                                        <td class="col-value">NAVNEET KUMAR VERMA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">FACULTY DESIGNATION</td>
+                                        <td class="col-value">Associate Professor Grade 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">SCHOOL</td>
+                                        <td class="col-value">School of Applied Science and Language</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">CABIN</td>
+                                        <td class="col-value">null</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">FACULTY DEPARTMENT</td>
+                                        <td class="col-value">SASL-Department</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">FACULTY EMAIL</td>
+                                        <td class="col-value">navneet.verma@vitbhopal.ac.in</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">FACULTY INTERCOM</td>
+                                        <td class="col-value"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">FACULTY MOBILE NUMBER</td>
+                                        <td class="col-value">9598663322</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 5 (Expanded by default) -->
+                <div class="accordion active">
+                    <div class="accordion-header">
+                        <div class="accordion-header-left">
+                            <div class="icon-badge"><i class="fa-solid fa-house-chimney"></i></div>
+                            <span class="accordion-title">HOSTEL INFORMATION</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content" style="display: block;">
+                        <div class="table-container">
+                            <table class="info-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="col-label">Application Number</td>
+                                        <td class="col-value">2023323985</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">Register Number</td>
+                                        <td class="col-value">23BCE11562</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">Block Name</td>
+                                        <td class="col-value">MENS HOSTEL BLOCK-2 (BOYS HOSTEL - Block )</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">Room No.</td>
+                                        <td class="col-value">B609</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">Bed Type</td>
+                                        <td class="col-value">3 - BED - NACPF</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-label">Mess Information</td>
+                                        <td class="col-value">VEG - M/S MAYURI CATERERS</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- VTOP Menu Drawer -->
+    <div class="vtop-drawer-overlay" id="vtopDrawerOverlay"></div>
+    <div class="vtop-drawer" id="vtopDrawer">
+        <div class="vtop-drawer-header">
+            <span>VTOP Menu</span>
+            <button class="drawer-close-btn" id="drawerCloseBtn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="vtop-drawer-body">
+            <a href="#" class="drawer-item-link">
+                <div><i class="fa-solid fa-phone"></i> Contact Us</div>
+            </a>
+            
+            <div class="drawer-item accordion-drawer active">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-briefcase"></i> My Info</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="profile.html"><i class="fa-regular fa-circle-dot"></i> Profile</a>
+                    <a href="credentials.html"><i class="fa-regular fa-circle-dot"></i> Credentials</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Acknowledgement View</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Student Bank Info</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> AAPAR ID Upload</a>
+                </div>
+            </div>
+            
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-circle-info"></i> Info Corner</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> FAQ</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Spotlight</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> General</a>
+                </div>
+            </div>
+            
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-paw"></i> Proctor</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Proctor Details</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Proctor Message</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-graduation-cap"></i> Academics</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Faculty Info</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Class Messages</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> My Curriculum</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Time Table</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Class Attendance</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Course Page</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-building-columns"></i> Research</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> My Research Profile</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Course Work Registration</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Registration Status</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Meeting info</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-book"></i> Examination</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Exam Schedule</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Marks</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Grades</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-space-shuttle shuttle-icon"></i> Services</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> PAT Registration</a>
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Transcript Request</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-certificate"></i> Bonafide</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Apply Bonafide</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-money-bill"></i> Online Payments</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Payments</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-house"></i> Hostels</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Leave Request</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-trophy"></i> SW Events</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Event Registration</a>
+                </div>
+            </div>
+
+            <div class="drawer-item accordion-drawer">
+                <div class="drawer-item-header">
+                    <div><i class="fa-solid fa-lock"></i> My Account</div>
+                    <i class="fa-solid fa-chevron-down drawer-chevron"></i>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="#"><i class="fa-regular fa-circle-dot"></i> Change Password</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
