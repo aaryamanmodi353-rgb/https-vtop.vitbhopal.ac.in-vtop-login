@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sidebar.classList.remove('mobile-open');
             }
         }
-        
+
         // Close all popups
         document.querySelectorAll('.popup-menu').forEach(p => p.classList.remove('show-popup'));
         document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
@@ -34,22 +34,22 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebarItems.forEach(item => {
         const btn = item.querySelector('.sidebar-icon');
         const popup = item.querySelector('.popup-menu');
-        
+
         if (btn && popup) {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const isCurrentlyOpen = popup.classList.contains('show-popup');
-                
+
                 // Close all other popups
                 document.querySelectorAll('.popup-menu').forEach(p => p.classList.remove('show-popup'));
                 document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
-                
+
                 if (!isCurrentlyOpen) {
                     popup.classList.add('show-popup');
                     item.classList.add('active');
                 }
             });
-            
+
             // Prevent clicks inside popup from closing it
             popup.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const currentAccordion = header.parentElement;
             const content = currentAccordion.querySelector('.accordion-content');
-            
+
             // Toggle active class on current accordion
             const isActive = currentAccordion.classList.contains('active');
-            
+
             // Optional: close other accordions
             /*
             document.querySelectorAll('.accordion').forEach(acc => {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 acc.querySelector('.accordion-content').style.display = 'none';
             });
             */
-            
+
             if (isActive) {
                 currentAccordion.classList.remove('active');
                 content.style.display = 'none';
@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 3. Fake Session Timer
-    let minutes = 15;
-    let seconds = 43;
+    let minutes = 20;
+    let seconds = 0;
     const timerDisplay = document.getElementById('session-timer');
 
     setInterval(() => {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
         }
-        
+
         timerDisplay.textContent = `${minutes}m ${seconds}s`;
     }, 1000);
 
@@ -117,33 +117,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // VTOP Drawer Logic
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const hamburgerBtn = document.getElementById("hamburger-btn");
     const drawerCloseBtn = document.getElementById("drawerCloseBtn");
     const vtopDrawer = document.getElementById("vtopDrawer");
     const vtopDrawerOverlay = document.getElementById("vtopDrawerOverlay");
-    
+
     if (hamburgerBtn && drawerCloseBtn && vtopDrawer && vtopDrawerOverlay) {
         function openDrawer() {
             vtopDrawer.classList.add("open");
             vtopDrawerOverlay.classList.add("active");
         }
-        
+
         function closeDrawer() {
             vtopDrawer.classList.remove("open");
             vtopDrawerOverlay.classList.remove("active");
         }
-        
+
         hamburgerBtn.addEventListener("click", openDrawer);
         drawerCloseBtn.addEventListener("click", closeDrawer);
         vtopDrawerOverlay.addEventListener("click", closeDrawer);
-        
+
         // Drawer Accordions
         const drawerAccordions = document.querySelectorAll(".accordion-drawer .drawer-item-header");
         drawerAccordions.forEach(header => {
-            header.addEventListener("click", function() {
+            header.addEventListener("click", function () {
                 const parent = this.parentElement;
-                
+
                 // Toggle active class
                 if (parent.classList.contains("active")) {
                     parent.classList.remove("active");
