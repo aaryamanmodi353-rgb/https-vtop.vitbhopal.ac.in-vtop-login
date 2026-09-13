@@ -771,3 +771,72 @@ body {
     transform: scale(1.15);
     display: inline-block;
 }
+
+/* Homepage Styles */
+.homepage-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 10px;
+}
+.home-card {
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.home-card-header {
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.border-bottom-blue {
+    border-bottom: 2px solid #6fa8dc;
+}
+.badge-light {
+    background: #fdf5e6;
+    color: #cc0000;
+    padding: 2px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.home-card-body {
+    padding: 10px;
+}
+.p-0 {
+    padding: 0 !important;
+}
+.mt-3 {
+    margin-top: 15px;
+}
+.home-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10px;
+    font-weight: 500;
+}
+.home-table th, .home-table td {
+    padding: 6px 10px;
+    text-align: left;
+}
+.home-table th {
+    font-weight: bold;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.text-blue { color: #0b5394; }
+.italic { font-style: italic; font-weight: bold;}
+.text-red { color: #cc0000; }
+.text-center { text-align: center !important; font-weight: bold;}
+.bg-light-blue1 { background-color: #e6f2ff; width: 80px;}
+.bg-light-blue2 { background-color: #b3d9ff; }
+.bg-blue-primary { background-color: #4a86e8; }
+.text-white { color: white; }
+.home-table.no-border th, .home-table.no-border td {
+    border: 1px solid #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 6px 10px;
+}
