@@ -158,3 +158,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+// Redirect to index.html on page reload if not already on index.html
+const navEntries = performance.getEntriesByType('navigation');
+if (navEntries.length > 0 && navEntries[0].type === 'reload') {
+    if (!window.location.pathname.endsWith('index.html') && !window.location.pathname.endsWith('/')) {
+        window.location.href = 'index.html';
+    }
+}
